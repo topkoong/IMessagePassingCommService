@@ -1,0 +1,105 @@
+﻿<!-- 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// MainWindow.xaml - Visual presentation of Windows-based applications (WPF app)            //
+// An XML-based markup language language behind the visual presentation of an application   //                                               //
+// ver 1.0                                                                                  //
+// Environment : C# Windows Application                                                     //
+// Platform    : Windows 10 Home x64, Lenovo IdeaPad 700, Visual Studio 2017                //
+// Application : Graphical User Interface (GUI) prototype for CSE681-SMA, Fall 2017         //  
+// Author: Theerut Foongkiatcharoen, EECS Department, Syracuse University                   //
+//         tfoongki@syr.edu                                                                 //
+// Source: Dr. Jim Fawcett, EECS Department, CST 4-187, Syracuse University                 //
+//         jfawcett @twcny.rr.com                                                           //
+//////////////////////////////////////////////////////////////////////////////////////////////
+ -->
+<!--
+Package Operations:
+===================
+
+- This package defines WPF application processing by the client. It also supports viewing local files.
+ 
+Maintenance History:
+- ver 0.5 : Oct 29, 2017
+- - Added ShutDownPoolProcessButton_OnClick button event
+- - Added TextBox1_OnTextChanged event
+- - Edited BuildButton_OnClick button event.
+- - Edited FindButton_OnClick button event.
+- - Edited SendMainBuilderButton_OnClick button event.
+- - Updated public interface documentation  
+- ver 0.4 : Oct 28, 2017
+- - Edited SendChildBuilderButton_OnClick button event.
+- - Added ListBox1_OnPreviewMouseDown button event
+- - Updated public interface documentation  
+- ver 0.3 : Oct 25, 2017
+- - Added SendMsgToMBuilder function
+- - Updated public interface documentation  
+- ver 0.2 : Oct 20, 2017
+- - Added ObjSerialization
+- - Edited BuildButton_OnClick button event.
+- - Updated public interface documentation
+- ver 0.1 : Oct 10, 2017
+- - Added ShowPath function
+- - Added AddFile function
+- - Added Search function
+- - Added GetFilesHelper function
+- - Added GetFiles function
+- - Added BuildButton_OnClick button event.
+- - Added FindButton_OnClick button event.
+- - Added SendMainBuilderButton_OnClick button event.
+- - Added TextBox1_OnTextInput event
+- - Added a prologue
+- - Added public interface documentation
+-->
+<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Loaded="OnLoad"
+        Closing="OnClosing"
+        Title="Build Server" Height="800" Width="1200">
+    <Grid ShowGridLines="False" Margin="0,0,0.4,0">
+        <!--- define grid columns with six cells -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <!--- define grid rows with six cells -->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="FindButton" Content="Select Path" HorizontalAlignment="Left" Margin="51,9.8,0,0" Grid.Row="4" VerticalAlignment="Top" Width="100" Height="50" Click="FindButton_OnClick"/>
+        <Button Name="UploadFilesToRepo" Content="Upload Files To Repo" Grid.Column="2" HorizontalAlignment="Left" Margin="25,9.8,0,0" Grid.Row="4" VerticalAlignment="Top" Width="150" Height="50" Click="UploadFilesToRepo_OnClick"/>
+        <Button Name="BuildButton" Content="Generate a BuildRequest.xml" Grid.Column="3" HorizontalAlignment="Left" Margin="20,9.8,0,0" Grid.Row="4" VerticalAlignment="Top" Width="160" Height="50" Click="BuildButton_OnClick"/>
+        <Button Name="AddTestElementButton" Content="Add a TestElement" Grid.Column="4" HorizontalAlignment="Left" Margin="20,9.8,0,0" Grid.Row="4" VerticalAlignment="Top"  Width="160" Height="50" Click="AddTestElementButton_OnClick"/>
+        <Button Name="ShutDownPoolProcessButton" IsEnabled="false" Content="Shut down Pool Processes" Grid.Column="4" Margin="4,8,0,0" Grid.Row="8" VerticalAlignment="Top" Width="175" Height="60" Click="ShutDownPoolProcessButton_OnClick"/>
+        <Button Name="SendMainBuilderButton" Content="Start the main Builder" Grid.Column="3" Margin="4,8,0,0" Grid.Row="8" VerticalAlignment="Top" Width="175" Height="60" Click="SendMainBuilderButton_OnClick" IsEnabled="False"/>
+        <Button Name="SendChildBuilderButton" Content="Send number of child builder" Grid.Column="2" Margin="4,8,0,0" Grid.Row="8" VerticalAlignment="Top" Width="175" Height="60" IsEnabled="False" Click="SendChildBuilderButton_OnClick"/>
+        <Button Name="SendBuildRequestToRepo" Content="Send BuildRequest to Repo" Grid.Column="2" HorizontalAlignment="Left" Width="175" Height="60" Margin="14,10,0,0" Grid.Row="6" VerticalAlignment="Top" Click="SendBuildRequestToRepo_OnClick"/>
+        <ListBox Name="listBox1" PreviewMouseDown="ListBox1_OnPreviewMouseDown" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="576"  Margin="10,10.2,0,0" SelectionMode="Multiple" Grid.RowSpan="3" Grid.Row="1" />
+        <ListBox Name="listBox2" PreviewMouseDown="ListBox2_OnPreviewMouseDown" Grid.ColumnSpan="3" Grid.Column="3" HorizontalAlignment="Right" Height="210" Margin="0,10.2,10,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="576" Grid.Row="1" SelectionMode="Multiple"/>
+        <ListBox Name="listBox3" HorizontalAlignment="Left" Height="134" Margin="14,10.4,0,0" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Top" Width="373" Grid.ColumnSpan="2" SelectionMode="Multiple"/>
+        <TextBlock Name="textBlock1" Text="" Grid.ColumnSpan="6" Margin="10,10,9.8,9.6" Grid.Row="5"/>
+        <Label Grid.ColumnSpan="2" Content="Please specify the number of child builders" HorizontalAlignment="Left" Height="27" Margin="14,10,0,0" Grid.Row="8" VerticalAlignment="Top" Width="241"/>
+        <TextBox Name="textBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="89.6,14,0,0" Grid.Row="8" TextWrapping="Wrap" Text="e.g. 1" VerticalAlignment="Top" Width="63" TextInput="TextBox1_OnTextInput" IsEnabled="False" TextChanged="TextBox1_OnTextChanged"/>
+        <Label Content="Client Storage" HorizontalAlignment="Left" Margin="31.6,25,0,0" VerticalAlignment="Top" Width="135" Grid.Column="1" FontSize="16"/>
+        <Label Content="Repo Storage" Grid.Column="4" HorizontalAlignment="Left" Margin="42.8,25,0,0" VerticalAlignment="Top" Width="118" FontSize="16"/>
+    </Grid>
+
+</Window>

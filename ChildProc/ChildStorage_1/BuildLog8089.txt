@@ -1,0 +1,52 @@
+
+Building  CodeToTest1.cs ITest.cs TestDriver1.cs
+Build Result: Success
+
+Microsoft (R) Visual C# Compiler version 4.7.2556.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+
+
+Building  CodeToTest1.cs ITest.cs TestDriver1.cs
+Build Result: Success
+
+Microsoft (R) Visual C# Compiler version 4.7.2556.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+
+Child Builder no. 1 is connecting to RepoMock on thread 9
+
+Child Builder no. 1 downloading a file: CodeToTest1.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+Child Builder no. 1 downloading a file: ITest.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+Child Builder no. 1 downloading a file: TestDriver1.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+Child Builder no. 1 downloading a file: CodeToTest1.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+Child Builder no. 1 downloading a file: ITest.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+Child Builder no. 1 downloading a file: TestDriver1.cs from RepoMock to C:\Users\topkoong\documents\visual studio 2017\Projects\IMessagePassingCommService\ChildProc\ChildStorage_1 is successful
+
+
+Building dll files
+==========================================================================
+Building  CodeToTest1.cs ITest.cs TestDriver1.cs CodeToTest1.cs ITest.cs TestDriver1.cs
+Build Result: Success
+
+Microsoft (R) Visual C# Compiler version 4.7.2556.0
+for C# 5
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+This compiler is provided as part of the Microsoft (R) .NET Framework, but only supports language versions up to C# 5, which is no longer the latest version. For compilers that support newer versions of the C# programming language, see http://go.microsoft.com/fwlink/?LinkID=533240
+
+warning CS2002: Source file 'CodeToTest1.cs' specified multiple times
+warning CS2002: Source file 'ITest.cs' specified multiple times
+warning CS2002: Source file 'TestDriver1.cs' specified multiple times
+

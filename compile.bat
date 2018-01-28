@@ -1,0 +1,1 @@
+devenv IMessagePassingCommService.sln /rebuild debug

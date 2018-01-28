@@ -1,0 +1,16 @@
+*****Please click in the following order, otherwise you will get an error message.*****
+
+1. Select a file/files from listbox 2 (on the right ) or listbox 1 (on the left) to add a test element (The default test files shown are stored in GUI/Storage directory.)
+2. Then, click add a test element button and click generate a build request button.
+3. Afer that, select a buildrequest from listbox 3 (bottom left) and click send a build request to repo button
+4. Next, specify the number of child builders between 1 - 30 (Also allow user to only enter "numbers" in textbox)
+and click "Send number of child builder" button to confirm. 
+(It will pop up a message box to remind you how many child builders you would like the Mother Builder to spawn)
+5. Finally, you can start the main Builder (mother process) by clicking a "Start the main Builder" button.
+6. Please click "Shut down Pool Processes" button in case you would like to shut down the main Builder's Pool Processes.
+
+Additional Features
+You can generate and send a new build request to Pool processes as long as the mother builder is still running.
+You also can spawn a new child while the mother builder is still running.
+You can spawn a new child builder after you kill Mother Builder's pool processes.
+You can send a new build request after you kill Mother Builder's pool processes.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTestRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestRequest>
+    <TestLibrary>dllFile_1_8089.dll</TestLibrary>
+    <TestLibrary>dllFile_2_8089.dll</TestLibrary>
+  </TestRequest>
+  <TestRequest>
+    <TestLibrary>dllFile_1_8089.dll</TestLibrary>
+    <TestLibrary>dllFile_2_8089.dll</TestLibrary>
+  </TestRequest>
+</ArrayOfTestRequest>
