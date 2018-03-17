@@ -3,7 +3,7 @@
 
 - [x] Package prologues and function prologues are included.
 - [x] The public interface documentation — holding a short description of the package operations, the required files to build the package, and the build process and the maintenance history — is included.
-- [x] Each funtion includes some comments to describe its operation.
+- [x] Each function includes some comments to describe its operation.
 
 
 In general, software development is complex, especially as applications, teams, and deployment infrastructure grow in complexity themselves. Also, software projects involve lots of files consist of a great number of packages and million lines of codes so keeping track of all of these becomes an intolerable burden, and it is arduous and time-consuming when developers attempt to merge their accumulated code changes. These factors combined makes it harder to deliver updates to customers quickly. Hence, with the Remote Build Server concept that efficiently and strongly supports continuous integration, it considerably enhances software quality and development process, and developers can catch bugs early, spend less time debugging, and deliver software more rapidly.
